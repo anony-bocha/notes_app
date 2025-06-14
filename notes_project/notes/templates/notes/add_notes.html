@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{% if note %}Edit{% else %}Add{% endif %} Note</h2>
+<form method="POST">
+    {% csrf_token %}
+    <input type="text" name="title" placeholder="Title" value="{{ note.title|default_if_none:'' }}"><br>
+    <textarea name="content" placeholder="Write your note...">{{ note.content|default_if_none:'' }}</textarea><br>
+    <button type="submit">Save</button>
+</form>
+{% endblock %}
