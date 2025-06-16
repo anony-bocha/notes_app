@@ -1,6 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.contrib.auth.views import LogoutView
 
+class LogoutGetView(LogoutView):
+    http_method_names = ['get', 'post']
 class Note(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)

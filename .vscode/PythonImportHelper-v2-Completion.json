@@ -202,6 +202,14 @@
         "documentation": {}
     },
     {
+        "label": "home",
+        "importPath": "notes.views",
+        "description": "notes.views",
+        "isExtraImport": true,
+        "detail": "notes.views",
+        "documentation": {}
+    },
+    {
         "label": "get_wsgi_application",
         "importPath": "django.core.wsgi",
         "description": "django.core.wsgi",
@@ -250,7 +258,7 @@
         "kind": 5,
         "importPath": "notes_project.notes.urls",
         "description": "notes_project.notes.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.home, name='home'),\n    path('add/', views.add_note, name='add_note'),\n    path('edit/<int:note_id>/', views.edit_note, name='edit_note'),\n    path('delete/<int:note_id>/', views.delete_note, name='delete_note'),\n    path('accounts/', include('django.contrib.auth.urls')),\n    path('signup/', views.signup, name='signup'),\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', views.home, name='home'),\n    path('add/', views.add_note, name='add_notes'),\n    path('edit/<int:note_id>/', views.edit_note, name='edit_note'),\n    path('delete/<int:note_id>/', views.delete_note, name='delete_note'),\n    path('accounts/', include('django.contrib.auth.urls')),\n    path('accounts/signup/', signup, name='signup'),\n    path('signup/', views.signup, name='signup'),\n]",
         "detail": "notes_project.notes.urls",
         "documentation": {}
     },
@@ -367,7 +375,7 @@
         "kind": 5,
         "importPath": "notes_project.notes_project.settings",
         "description": "notes_project.notes_project.settings",
-        "peekOfCode": "ROOT_URLCONF = 'notes_project.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [os.path.join(BASE_DIR, 'templates')],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "peekOfCode": "ROOT_URLCONF = 'notes_project.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / 'templates'],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
         "detail": "notes_project.notes_project.settings",
         "documentation": {}
     },
@@ -376,7 +384,7 @@
         "kind": 5,
         "importPath": "notes_project.notes_project.settings",
         "description": "notes_project.notes_project.settings",
-        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [os.path.join(BASE_DIR, 'templates')],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',\n                'django.contrib.messages.context_processors.messages',",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / 'templates'],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',\n                'django.contrib.messages.context_processors.messages',",
         "detail": "notes_project.notes_project.settings",
         "documentation": {}
     },
@@ -493,7 +501,7 @@
         "kind": 5,
         "importPath": "notes_project.notes_project.urls",
         "description": "notes_project.notes_project.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('signup/', signup, name='signup'),   # ← add this line\n    path('', include('notes.urls')),           # your app URLs\n    path('accounts/', include('django.contrib.auth.urls')),  # for login, logout\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('signup/', signup, name='signup'),   # ← add this line\n    path('', home, name='home'),\n    path('accounts/', include('django.contrib.auth.urls')),  # for login, logout\n]",
         "detail": "notes_project.notes_project.urls",
         "documentation": {}
     },

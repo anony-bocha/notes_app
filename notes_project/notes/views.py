@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 @login_required
 def home(request):
     notes = Note.objects.filter(user=request.user)
-    return render(request, 'home.html', {'notes': notes})
+    return render(request, 'notes/home.html', {'notes': notes})
 @login_required
 def add_note(request):
     if request.method == 'POST':
@@ -41,8 +41,12 @@ def signup(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('home')  # or your home page name
+            return redirect('home')
+        else:
+            # show errors on form
+            return render(request, 'registration/signup.html', {'form': form})
     else:
         form = UserCreationForm()
     return render(request, 'registration/signup.html', {'form': form})
+
 
