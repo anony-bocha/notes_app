@@ -1,33 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
   {% if user.is_authenticated %}
-    <p>Hi {{ user.username }}! You are logged in.</p>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2>Hi {{ user.username }}! Your Notes</h2>
+      <form method="post" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button class="btn btn-outline-danger btn-sm">Logout</button>
+      </form>
+    </div>
 
-    <h2>Your Notes</h2>
-    <ul>
-      {% for note in notes %}
-        <li>
-          <strong>{{ note.title }}</strong> - {{ note.content }}
-          [<a href="{% url 'edit_note' note.id %}">Edit</a>]
-          [<a href="{% url 'delete_note' note.id %}">Delete</a>]
-        </li>
-      {% empty %}
-        <li>No notes found</li>
-      {% endfor %}
-    </ul>
+    <a href="{% url 'add_notes' %}" class="btn btn-primary mb-3">➕ Add New Note</a>
 
-    <a href="{% url 'add_notes' %}">Add Note</a> |
-
-    <form method="post" action="{% url 'logout' %}" style="display:inline;">
-      {% csrf_token %}
-      <button type="submit" style="background:none; border:none; color:blue; cursor:pointer; padding:0;">
-        Logout
-      </button>
-    </form>
+    {% if notes %}
+      <div class="list-group">
+        {% for note in notes %}
+          <div class="list-group-item">
+            <h5 class="mb-1">{{ note.title }}</h5>
+            <p class="mb-1">{{ note.content }}</p>
+            <div class="mt-2">
+              <a href="{% url 'edit_note' note.id %}" class="btn btn-sm btn-outline-info">Edit</a>
+              <a href="{% url 'delete_note' note.id %}" class="btn btn-sm btn-outline-danger">Delete</a>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <p>No notes found.</p>
+    {% endif %}
 
   {% else %}
-    <p>You are not logged in.</p>
-    <a href="{% url 'login' %}">Login</a> |
-    <a href="{% url 'signup' %}">Sign up</a>
+    <p class="text-danger">You are not logged in.</p>
+    <a href="{% url 'login' %}" class="btn btn-success">Login</a>
+    <a href="{% url 'signup' %}" class="btn btn-secondary">Sign up</a>
   {% endif %}
 {% endblock %}
