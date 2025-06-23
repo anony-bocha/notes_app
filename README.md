@@ -1,3 +1,9 @@
+![Python Version](https://img.shields.io/badge/Python-3.11-blue)
+![Django Version](https://img.shields.io/badge/Django-5.2-brightgreen)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+![Issues](https://img.shields.io/github/issues/anony-bocha/notes_app)
+![Stars](https://img.shields.io/github/stars/anony-bocha/notes_app)
+
 # 📝 Django Notes App
 
 A simple Notes app built with Django that allows users to register, log in, and manage personal notes (create, read, update, delete).
@@ -5,43 +11,53 @@ A simple Notes app built with Django that allows users to register, log in, and 
 ---
 
 ## 🚀 Features
-- User registration & login
-- Create, update, and delete notes
-- Notes are private to each user
-- Bootstrap-based clean UI
+
+- 🔐 User registration & login
+- 📝 Create, update, and delete notes
+- 👤 Notes are private to each user
+- 💻 Bootstrap-based clean and responsive UI
 
 ---
 
 ## 🛠️ Tech Stack
-- **Backend**: Python, Django
-- **Frontend**: HTML, Bootstrap
+
+| Layer     | Technology     |
+|-----------|----------------|
+| Backend   | Python, Django |
+| Frontend  | HTML, Bootstrap |
+| Database  | SQLite (default in Django) |
 
 ---
-## Screenshots
 
-### Login Page
+## 📸 Screenshots
+
+### 🔐 Login Page
 ![Login Page](screenshots/login.jpg)
 
-### Notes List  and hompage Page
-![Notes List](screenshots/hompage2.jpg )
-### first home page
-![first time page page](screenshots/hompage.jpg)
-### Register page
-![register page](screenshots/register.jpg)
-### Register checkup page
-![register check page](screenshots/register_check.jpg)
-### edit notes page
-![edit note page](screenshots/edit_note.jpg)
+### 🏠 Homepage (Logged-in Notes List)
+![Notes List](screenshots/hompage2.jpg)
 
-### Add Note Page
+### 🏁 First Time Homepage (Not Logged In)
+![First Time Homepage](screenshots/hompage.jpg)
+
+### 📝 Register Page
+![Register Page](screenshots/register.jpg)
+
+### ✅ Register Success Page
+![Register Check Page](screenshots/register_check.jpg)
+
+### ✏️ Edit Note
+![Edit Note](screenshots/edit_note.jpg)
+
+### ➕ Add Note
 ![Add Note](screenshots/add_notes.jpg)
+
+---
 
 ## ⚙️ Setup Instructions
 
-### 1. Clone the repository
+### 🔧 1. Clone the repository
+
 ```bash
 git clone https://github.com/anony-bocha/notes_app.git
 cd notes_app
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
