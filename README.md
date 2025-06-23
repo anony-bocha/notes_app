@@ -42,3 +42,6 @@ A simple Notes app built with Django that allows users to register, log in, and 
 ```bash
 git clone https://github.com/anony-bocha/notes_app.git
 cd notes_app
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
