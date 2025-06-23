@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-z=p7go(6@3lvzs8kgg2qb&t^c3l4)wd3xp0l_!g!q$6le%^p4m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -74,12 +74,17 @@ WSGI_APPLICATION = 'notes_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
+import dj_database_url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default='postgresql://notesapp_db_35ev_user:qegQuSR72gTkOAbbp8Ui9ywY4RyWWmwi@dpg-d1cjk3be5dus73fl4jrg-a.oregon-postgres.render.com:5432/notesapp_db_35ev',
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
+
+
 
 
 # Password validation
@@ -117,7 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
