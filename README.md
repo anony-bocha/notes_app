@@ -23,9 +23,9 @@ A simple Notes app built with Django that allows users to register, log in, and 
 ![Login Page](screenshots/login.jpg)
 
 ### Notes List  and hompage Page
-![Notes List](screenshots/homepage2.jpg )
+![Notes List](screenshots/hompage2.jpg )
 ### first home page
-![first time page page](screenshots/homepage.jpg)
+![first time page page](screenshots/hompage.jpg)
 ### Register page
 ![register page](screenshots/register.jpg)
 ### Register checkup page
