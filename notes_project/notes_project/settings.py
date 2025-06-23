@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
+from decouple import config
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -73,16 +75,13 @@ WSGI_APPLICATION = 'notes_project.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
-
 import dj_database_url
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default='postgresql://notesapp_db_35ev_user:qegQuSR72gTkOAbbp8Ui9ywY4RyWWmwi@dpg-d1cjk3be5dus73fl4jrg-a.oregon-postgres.render.com:5432/notesapp_db_35ev',
-        conn_max_age=600,
-        ssl_require=True
-    )
+    'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))
 }
+
+
 
 
 
@@ -131,3 +130,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/accounts/login/'
 LOGIN_URL = '/accounts/login/'
+
+
+SECRET_KEY = config('SECRET_KEY')
