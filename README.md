@@ -18,6 +18,9 @@ A simple Notes app built with Django that allows users to register, log in, and 
 - 💻 Bootstrap-based clean and responsive UI
 
 ---
+## Live Demo
+
+Check out the live site here: [anony.pythonanywhere.com](https://anony.pythonanywhere.com/)
 
 ## 🛠️ Tech Stack
 
