@@ -6,7 +6,7 @@ from pathlib import Path
 import os
 import dj_database_url
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
@@ -62,6 +62,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'notes_project.wsgi.application'
 
 
+<<<<<<< HEAD
 # Database configuration: SQLite for local, DATABASE_URL for production
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
@@ -74,6 +75,30 @@ else:
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
+=======
+# Database
+# https://docs.djangoproject.com/en/5.2/ref/settings/#databases
+
+
+
+SECRET_KEY = os.environ.get("SECRET_KEY", "unsafe")
+DEBUG = os.environ.get("DEBUG", "False") == "True"
+ALLOWED_HOSTS = ['*']
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
+
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
+
+
+>>>>>>> 7abb262 (Resolved merge conflicts in README.md and base.html)
 
 
 # Password validation
