@@ -15,7 +15,7 @@
         <textarea name="content" id="content" class="form-control" rows="5" required>{{ note.content|default:'' }}</textarea>
       </div>
       <button type="submit" class="btn btn-primary">{% if note %}Update{% else %}Add{% endif %} Note</button>
-      <a href="{% url 'home' %}" class="btn btn-secondary">Cancel</a>
+      <a href="{% url 'notes:home' %}" class="btn btn-secondary">Cancel</a>
     </form>
   </div>
 </div>

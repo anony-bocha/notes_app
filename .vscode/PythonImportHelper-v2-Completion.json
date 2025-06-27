@@ -494,6 +494,14 @@
         "documentation": {}
     },
     {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
         "label": "include",
         "importPath": "django.urls",
         "description": "django.urls",
@@ -526,11 +534,51 @@
         "documentation": {}
     },
     {
+        "label": "views",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
         "label": "login",
         "importPath": "django.contrib.auth",
         "description": "django.contrib.auth",
         "isExtraImport": true,
         "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "login",
+        "importPath": "django.contrib.auth",
+        "description": "django.contrib.auth",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
         "documentation": {}
     },
     {
@@ -574,6 +622,22 @@
         "documentation": {}
     },
     {
+        "label": "login_required",
+        "importPath": "django.contrib.auth.decorators",
+        "description": "django.contrib.auth.decorators",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.decorators",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreationForm",
+        "importPath": "django.contrib.auth.forms",
+        "description": "django.contrib.auth.forms",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.forms",
+        "documentation": {}
+    },
+    {
         "label": "UserCreationForm",
         "importPath": "django.contrib.auth.forms",
         "description": "django.contrib.auth.forms",
@@ -598,11 +662,12 @@
         "documentation": {}
     },
     {
-        "label": "signup",
-        "importPath": "notes.views",
-        "description": "notes.views",
+        "label": "dj_database_url",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "notes.views",
+        "importPath": "dj_database_url",
+        "description": "dj_database_url",
+        "detail": "dj_database_url",
         "documentation": {}
     },
     {
@@ -1802,12 +1867,30 @@
         "documentation": {}
     },
     {
+        "label": "app_name",
+        "kind": 5,
+        "importPath": "notes_project.notes.urls",
+        "description": "notes_project.notes.urls",
+        "peekOfCode": "app_name = 'notes'  # Namespace your app URLs\nurlpatterns = [\n    path('', views.home, name='home'),\n    path('add/', views.add_note, name='create'),\n    path('edit/<int:note_id>/', views.edit_note, name='edit_note'),\n    path('delete/<int:note_id>/', views.delete_note, name='delete_note'),\n    # Auth\n    path('login/', auth_views.LoginView.as_view(), name='login'),\n    path('logout/', auth_views.LogoutView.as_view(), name='logout'),\n    path('signup/', views.signup, name='signup'),",
+        "detail": "notes_project.notes.urls",
+        "documentation": {}
+    },
+    {
         "label": "urlpatterns",
         "kind": 5,
         "importPath": "notes_project.notes.urls",
         "description": "notes_project.notes.urls",
-        "peekOfCode": "urlpatterns = [\n    path('', views.home, name='home'),\n    path('add/', views.add_note, name='add_notes'),\n    path('edit/<int:note_id>/', views.edit_note, name='edit_note'),\n    path('delete/<int:note_id>/', views.delete_note, name='delete_note'),\n    path('accounts/login/', auth_views.LoginView.as_view(), name='login'),\n    path('accounts/logout/', auth_views.LogoutView.as_view(), name='logout'),\n    path('accounts/signup/', signup, name='signup'),  # ✅ Only one signup path\n    path('accounts/', include('django.contrib.auth.urls')),  # Good to keep\n]",
+        "peekOfCode": "urlpatterns = [\n    path('', views.home, name='home'),\n    path('add/', views.add_note, name='create'),\n    path('edit/<int:note_id>/', views.edit_note, name='edit_note'),\n    path('delete/<int:note_id>/', views.delete_note, name='delete_note'),\n    # Auth\n    path('login/', auth_views.LoginView.as_view(), name='login'),\n    path('logout/', auth_views.LogoutView.as_view(), name='logout'),\n    path('signup/', views.signup, name='signup'),\n]",
         "detail": "notes_project.notes.urls",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "notes_project.notes.urls.py.a051c0091d59ca697da7da6b24a69d31",
+        "description": "notes_project.notes.urls.py.a051c0091d59ca697da7da6b24a69d31",
+        "peekOfCode": "urlpatterns = [\n    path('', views.home, name='home'),\n    path('add/', views.add_note, name='add_notes'),\n    path('edit/<int:note_id>/', views.edit_note, name='edit_note'),\n    path('delete/<int:note_id>/', views.delete_note, name='delete_note'),\n    path('accounts/login/', auth_views.LoginView.as_view(), name='login'),\n    path('accounts/logout/', auth_views.LogoutView.as_view(), name='logout'),\n    path('accounts/signup/', signup, name='signup'),  # ✅ Only one signup path\n    path('accounts/', include('django.contrib.auth.urls')),  # Good to keep\n]",
+        "detail": "notes_project.notes.urls.py.a051c0091d59ca697da7da6b24a69d31",
         "documentation": {}
     },
     {
@@ -1815,7 +1898,7 @@
         "kind": 2,
         "importPath": "notes_project.notes.views",
         "description": "notes_project.notes.views",
-        "peekOfCode": "def home(request):\n    notes = Note.objects.filter(user=request.user)\n    return render(request, 'notes/home.html', {'notes': notes})\n@login_required\ndef add_note(request):\n    if request.method == 'POST':\n        title = request.POST['title']\n        content = request.POST['content']\n        Note.objects.create(user=request.user, title=title, content=content)\n        return redirect('home')",
+        "peekOfCode": "def home(request):\n    notes = Note.objects.filter(user=request.user)\n    return render(request, 'notes/home.html', {'notes': notes})\n@login_required\ndef add_note(request):\n    if request.method == 'POST':\n        title = request.POST['title']\n        content = request.POST['content']\n        Note.objects.create(user=request.user, title=title, content=content)\n        return redirect('notes:home')  # updated with namespace",
         "detail": "notes_project.notes.views",
         "documentation": {}
     },
@@ -1824,7 +1907,7 @@
         "kind": 2,
         "importPath": "notes_project.notes.views",
         "description": "notes_project.notes.views",
-        "peekOfCode": "def add_note(request):\n    if request.method == 'POST':\n        title = request.POST['title']\n        content = request.POST['content']\n        Note.objects.create(user=request.user, title=title, content=content)\n        return redirect('home')\n    return render(request, 'notes/add_notes.html')  # ✅ use this name\n@login_required\ndef edit_note(request, note_id):\n    note = get_object_or_404(Note, id=note_id, user=request.user)",
+        "peekOfCode": "def add_note(request):\n    if request.method == 'POST':\n        title = request.POST['title']\n        content = request.POST['content']\n        Note.objects.create(user=request.user, title=title, content=content)\n        return redirect('notes:home')  # updated with namespace\n    return render(request, 'notes/add_notes.html')\n@login_required\ndef edit_note(request, note_id):\n    note = get_object_or_404(Note, id=note_id, user=request.user)",
         "detail": "notes_project.notes.views",
         "documentation": {}
     },
@@ -1833,7 +1916,7 @@
         "kind": 2,
         "importPath": "notes_project.notes.views",
         "description": "notes_project.notes.views",
-        "peekOfCode": "def edit_note(request, note_id):\n    note = get_object_or_404(Note, id=note_id, user=request.user)\n    if request.method == 'POST':\n        note.title = request.POST['title']\n        note.content = request.POST['content']\n        note.save()\n        return redirect('home')\n    return render(request, 'notes/add_notes.html', {'note': note}) \n@login_required\ndef delete_note(request, note_id):",
+        "peekOfCode": "def edit_note(request, note_id):\n    note = get_object_or_404(Note, id=note_id, user=request.user)\n    if request.method == 'POST':\n        note.title = request.POST['title']\n        note.content = request.POST['content']\n        note.save()\n        return redirect('notes:home')  # updated with namespace\n    return render(request, 'notes/add_notes.html', {'note': note})\n@login_required\ndef delete_note(request, note_id):",
         "detail": "notes_project.notes.views",
         "documentation": {}
     },
@@ -1842,7 +1925,7 @@
         "kind": 2,
         "importPath": "notes_project.notes.views",
         "description": "notes_project.notes.views",
-        "peekOfCode": "def delete_note(request, note_id):\n    note = get_object_or_404(Note, id=note_id, user=request.user)\n    note.delete()\n    return redirect('home')\ndef signup(request):\n    if request.method == 'POST':\n        form = UserCreationForm(request.POST)\n        if form.is_valid():\n            user = form.save()\n            login(request, user)",
+        "peekOfCode": "def delete_note(request, note_id):\n    note = get_object_or_404(Note, id=note_id, user=request.user)\n    note.delete()\n    return redirect('notes:home')  # updated with namespace\ndef signup(request):\n    if request.method == 'POST':\n        form = UserCreationForm(request.POST)\n        if form.is_valid():\n            user = form.save()\n            login(request, user)",
         "detail": "notes_project.notes.views",
         "documentation": {}
     },
@@ -1851,8 +1934,53 @@
         "kind": 2,
         "importPath": "notes_project.notes.views",
         "description": "notes_project.notes.views",
-        "peekOfCode": "def signup(request):\n    if request.method == 'POST':\n        form = UserCreationForm(request.POST)\n        if form.is_valid():\n            user = form.save()\n            login(request, user)\n            return redirect('home')\n        else:\n            # show errors on form\n            return render(request, 'registration/signup.html', {'form': form})",
+        "peekOfCode": "def signup(request):\n    if request.method == 'POST':\n        form = UserCreationForm(request.POST)\n        if form.is_valid():\n            user = form.save()\n            login(request, user)\n            return redirect('notes:home')  # updated with namespace\n        else:\n            return render(request, 'registration/signup.html', {'form': form})\n    else:",
         "detail": "notes_project.notes.views",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "notes_project.notes.views.py.48be59c075b02cbecf2b4e55d357d489",
+        "description": "notes_project.notes.views.py.48be59c075b02cbecf2b4e55d357d489",
+        "peekOfCode": "def home(request):\n    notes = Note.objects.filter(user=request.user)\n    return render(request, 'notes/home.html', {'notes': notes})\n@login_required\ndef add_note(request):\n    if request.method == 'POST':\n        title = request.POST['title']\n        content = request.POST['content']\n        Note.objects.create(user=request.user, title=title, content=content)\n        return redirect('home')",
+        "detail": "notes_project.notes.views.py.48be59c075b02cbecf2b4e55d357d489",
+        "documentation": {}
+    },
+    {
+        "label": "add_note",
+        "kind": 2,
+        "importPath": "notes_project.notes.views.py.48be59c075b02cbecf2b4e55d357d489",
+        "description": "notes_project.notes.views.py.48be59c075b02cbecf2b4e55d357d489",
+        "peekOfCode": "def add_note(request):\n    if request.method == 'POST':\n        title = request.POST['title']\n        content = request.POST['content']\n        Note.objects.create(user=request.user, title=title, content=content)\n        return redirect('home')\n    return render(request, 'notes/add_notes.html')  # ✅ use this name\n@login_required\ndef edit_note(request, note_id):\n    note = get_object_or_404(Note, id=note_id, user=request.user)",
+        "detail": "notes_project.notes.views.py.48be59c075b02cbecf2b4e55d357d489",
+        "documentation": {}
+    },
+    {
+        "label": "edit_note",
+        "kind": 2,
+        "importPath": "notes_project.notes.views.py.48be59c075b02cbecf2b4e55d357d489",
+        "description": "notes_project.notes.views.py.48be59c075b02cbecf2b4e55d357d489",
+        "peekOfCode": "def edit_note(request, note_id):\n    note = get_object_or_404(Note, id=note_id, user=request.user)\n    if request.method == 'POST':\n        note.title = request.POST['title']\n        note.content = request.POST['content']\n        note.save()\n        return redirect('home')\n    return render(request, 'notes/add_notes.html', {'note': note}) \n@login_required\ndef delete_note(request, note_id):",
+        "detail": "notes_project.notes.views.py.48be59c075b02cbecf2b4e55d357d489",
+        "documentation": {}
+    },
+    {
+        "label": "delete_note",
+        "kind": 2,
+        "importPath": "notes_project.notes.views.py.48be59c075b02cbecf2b4e55d357d489",
+        "description": "notes_project.notes.views.py.48be59c075b02cbecf2b4e55d357d489",
+        "peekOfCode": "def delete_note(request, note_id):\n    note = get_object_or_404(Note, id=note_id, user=request.user)\n    note.delete()\n    return redirect('home')\ndef signup(request):\n    if request.method == 'POST':\n        form = UserCreationForm(request.POST)\n        if form.is_valid():\n            user = form.save()\n            login(request, user)",
+        "detail": "notes_project.notes.views.py.48be59c075b02cbecf2b4e55d357d489",
+        "documentation": {}
+    },
+    {
+        "label": "signup",
+        "kind": 2,
+        "importPath": "notes_project.notes.views.py.48be59c075b02cbecf2b4e55d357d489",
+        "description": "notes_project.notes.views.py.48be59c075b02cbecf2b4e55d357d489",
+        "peekOfCode": "def signup(request):\n    if request.method == 'POST':\n        form = UserCreationForm(request.POST)\n        if form.is_valid():\n            user = form.save()\n            login(request, user)\n            return redirect('home')\n        else:\n            # show errors on form\n            return render(request, 'registration/signup.html', {'form': form})",
+        "detail": "notes_project.notes.views.py.48be59c075b02cbecf2b4e55d357d489",
         "documentation": {}
     },
     {
@@ -1869,7 +1997,7 @@
         "kind": 5,
         "importPath": "notes_project.notes_project.settings",
         "description": "notes_project.notes_project.settings",
-        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-z=p7go(6@3lvzs8kgg2qb&t^c3l4)wd3xp0l_!g!q$6le%^p4m'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = os.environ.get('SECRET_KEY', 'unsafe-dev-key')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = os.environ.get('DEBUG', 'True') == 'True'\n# For local dev or PythonAnywhere\nALLOWED_HOSTS = ['*']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',",
         "detail": "notes_project.notes_project.settings",
         "documentation": {}
     },
@@ -1878,7 +2006,7 @@
         "kind": 5,
         "importPath": "notes_project.notes_project.settings",
         "description": "notes_project.notes_project.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-z=p7go(6@3lvzs8kgg2qb&t^c3l4)wd3xp0l_!g!q$6le%^p4m'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "SECRET_KEY = os.environ.get('SECRET_KEY', 'unsafe-dev-key')\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = os.environ.get('DEBUG', 'True') == 'True'\n# For local dev or PythonAnywhere\nALLOWED_HOSTS = ['*']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
         "detail": "notes_project.notes_project.settings",
         "documentation": {}
     },
@@ -1887,7 +2015,7 @@
         "kind": 5,
         "importPath": "notes_project.notes_project.settings",
         "description": "notes_project.notes_project.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "DEBUG = os.environ.get('DEBUG', 'True') == 'True'\n# For local dev or PythonAnywhere\nALLOWED_HOSTS = ['*']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
         "detail": "notes_project.notes_project.settings",
         "documentation": {}
     },
@@ -1896,7 +2024,7 @@
         "kind": 5,
         "importPath": "notes_project.notes_project.settings",
         "description": "notes_project.notes_project.settings",
-        "peekOfCode": "ALLOWED_HOSTS = []\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'notes'",
+        "peekOfCode": "ALLOWED_HOSTS = ['*']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'notes',",
         "detail": "notes_project.notes_project.settings",
         "documentation": {}
     },
@@ -1905,7 +2033,7 @@
         "kind": 5,
         "importPath": "notes_project.notes_project.settings",
         "description": "notes_project.notes_project.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'notes'\n]\nMIDDLEWARE = [",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'notes',\n]\nMIDDLEWARE = [",
         "detail": "notes_project.notes_project.settings",
         "documentation": {}
     },
@@ -1923,7 +2051,7 @@
         "kind": 5,
         "importPath": "notes_project.notes_project.settings",
         "description": "notes_project.notes_project.settings",
-        "peekOfCode": "ROOT_URLCONF = 'notes_project.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / 'templates'],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "peekOfCode": "ROOT_URLCONF = 'notes_project.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / 'templates'],  # custom templates dir\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
         "detail": "notes_project.notes_project.settings",
         "documentation": {}
     },
@@ -1932,7 +2060,7 @@
         "kind": 5,
         "importPath": "notes_project.notes_project.settings",
         "description": "notes_project.notes_project.settings",
-        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / 'templates'],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',\n                'django.contrib.messages.context_processors.messages',",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [BASE_DIR / 'templates'],  # custom templates dir\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',\n                'django.contrib.messages.context_processors.messages',",
         "detail": "notes_project.notes_project.settings",
         "documentation": {}
     },
@@ -1941,16 +2069,7 @@
         "kind": 5,
         "importPath": "notes_project.notes_project.settings",
         "description": "notes_project.notes_project.settings",
-        "peekOfCode": "WSGI_APPLICATION = 'notes_project.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.2/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation",
-        "detail": "notes_project.notes_project.settings",
-        "documentation": {}
-    },
-    {
-        "label": "DATABASES",
-        "kind": 5,
-        "importPath": "notes_project.notes_project.settings",
-        "description": "notes_project.notes_project.settings",
-        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.sqlite3',\n        'NAME': BASE_DIR / 'db.sqlite3',\n    }\n}\n# Password validation\n# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {",
+        "peekOfCode": "WSGI_APPLICATION = 'notes_project.wsgi.application'\n# Database configuration: SQLite for local, DATABASE_URL for production\nif 'DATABASE_URL' in os.environ:\n    DATABASES = {\n        'default': dj_database_url.config(conn_max_age=600)\n    }\nelse:\n    DATABASES = {\n        'default': {\n            'ENGINE': 'django.db.backends.sqlite3',",
         "detail": "notes_project.notes_project.settings",
         "documentation": {}
     },
@@ -1968,7 +2087,7 @@
         "kind": 5,
         "importPath": "notes_project.notes_project.settings",
         "description": "notes_project.notes_project.settings",
-        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Authentication redirects",
         "detail": "notes_project.notes_project.settings",
         "documentation": {}
     },
@@ -1977,7 +2096,7 @@
         "kind": 5,
         "importPath": "notes_project.notes_project.settings",
         "description": "notes_project.notes_project.settings",
-        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Authentication redirects\nLOGIN_REDIRECT_URL = '/'",
         "detail": "notes_project.notes_project.settings",
         "documentation": {}
     },
@@ -1986,7 +2105,7 @@
         "kind": 5,
         "importPath": "notes_project.notes_project.settings",
         "description": "notes_project.notes_project.settings",
-        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/accounts/login/'",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Authentication redirects\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/accounts/login/'",
         "detail": "notes_project.notes_project.settings",
         "documentation": {}
     },
@@ -1995,7 +2114,7 @@
         "kind": 5,
         "importPath": "notes_project.notes_project.settings",
         "description": "notes_project.notes_project.settings",
-        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.2/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/accounts/login/'\nLOGIN_URL = '/accounts/login/'",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\nSTATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Authentication redirects\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/accounts/login/'\nLOGIN_URL = '/accounts/login/'",
         "detail": "notes_project.notes_project.settings",
         "documentation": {}
     },
@@ -2004,7 +2123,16 @@
         "kind": 5,
         "importPath": "notes_project.notes_project.settings",
         "description": "notes_project.notes_project.settings",
-        "peekOfCode": "STATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/accounts/login/'\nLOGIN_URL = '/accounts/login/'",
+        "peekOfCode": "STATIC_URL = 'static/'\nSTATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Authentication redirects\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/accounts/login/'\nLOGIN_URL = '/accounts/login/'",
+        "detail": "notes_project.notes_project.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_ROOT",
+        "kind": 5,
+        "importPath": "notes_project.notes_project.settings",
+        "description": "notes_project.notes_project.settings",
+        "peekOfCode": "STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')\n# Default primary key field type\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Authentication redirects\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/accounts/login/'\nLOGIN_URL = '/accounts/login/'",
         "detail": "notes_project.notes_project.settings",
         "documentation": {}
     },
@@ -2013,7 +2141,7 @@
         "kind": 5,
         "importPath": "notes_project.notes_project.settings",
         "description": "notes_project.notes_project.settings",
-        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/accounts/login/'\nLOGIN_URL = '/accounts/login/'",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\n# Authentication redirects\nLOGIN_REDIRECT_URL = '/'\nLOGOUT_REDIRECT_URL = '/accounts/login/'\nLOGIN_URL = '/accounts/login/'",
         "detail": "notes_project.notes_project.settings",
         "documentation": {}
     },
@@ -2049,7 +2177,7 @@
         "kind": 5,
         "importPath": "notes_project.notes_project.urls",
         "description": "notes_project.notes_project.urls",
-        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('signup/', signup, name='signup'),   # ← add this line\n    path('', include('notes.urls')),\n    path('accounts/', include('django.contrib.auth.urls')),  # for login, logout\n]",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include(('notes.urls', 'notes'), namespace='notes')),  # Use namespace 'notes'\n]",
         "detail": "notes_project.notes_project.urls",
         "documentation": {}
     },
